@@ -1,0 +1,32 @@
+nav, footer, video, figcaption {
+  display: none;
+}
+
+/* the next 2 things are replacing this one
+
+a:after {
+  content: " ("attr(href) ")";
+  font-size: 80%;
+}
+
+*/
+
+a[href^="http://"]:after,
+a[href^="https://"]:after {
+ content: " (" attr(href) ")";
+  font-size: 80%;
+}
+
+a[href^="#"]:after {
+ content: "you're already here";
+}
+/*the ^ is "starts with"*/
+
+.container, article {
+  width: 100%;
+}
+/*you can't always use this one in all print css's. it depends on your html*/
+
+figure {
+  float: left;
+}
